@@ -1,22 +1,24 @@
-const Sequelize = require('sequelize')
+// const Sequelize = require('sequelize')
+const {Client} = require('pg')
 
-const sequelize = new Sequelize({
-  host: process.env.DB_HOST,
-  database: process.env.DB_NAME,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  dialect: 'postgres',
-  port: process.env.DB_PORT,
-  logging: true,
-  dialectOptions: {
-    ssl: {
-      require: true, // This will help you. But you will see nwe error
-      rejectUnauthorized: false // This line will fix new error
-    }
-  },
+// const sequelize = new Sequelize({
+//   host: 'localhost',
+//   database: 'crud-alunos',
+//   username: 'postgres',
+//   password: 'admin',
+//   dialect: 'postgres',
+//   port: 5432,
+//   logging: true
+// })
+
+// module.exports = sequelize
+
+const client = new Client({
+  connectionString: process.env.DB_URI,
+  ssl: true
 })
 
-module.exports = sequelize
+module.exports = client
 
 // Test DB Conenction //
 async function test(){

@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
-const sequelize = require('../src/pg/_database')
+const client = require('../src/pg/_database')
 
-const AlunosModels = sequelize.define('alunos', {
+const AlunosModels = client.define('alunos', {
     nome: {
         type: Sequelize.STRING,
         unique: true

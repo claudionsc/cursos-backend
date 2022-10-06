@@ -1,8 +1,8 @@
-const sequelize = require('../src/pg/_database')
+const client = require('../src/pg/_database')
 
 const models = {
     alunos: require('./alunos'),
-    sequelize: sequelize
+    client: client
 }
 
 module.exports = models

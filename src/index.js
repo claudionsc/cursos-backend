@@ -15,6 +15,8 @@ const password = process.env.DB_PASSWORD
 
 
 const database = `postgres://${user}:${password}@${host}:${DBport}/${name}`
+module.exports = database
+
 const port = process.env.PORT || 5000
 
 app.set('json spaces', 2)
