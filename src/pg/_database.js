@@ -7,7 +7,13 @@ const sequelize = new Sequelize({
   password: process.env.DB_PASSWORD,
   dialect: 'postgres',
   port: process.env.DB_PORT,
-  logging: true
+  logging: true,
+  dialectOptions: {
+    ssl: {
+      require: true, // This will help you. But you will see nwe error
+      rejectUnauthorized: false // This line will fix new error
+    }
+  },
 })
 
 module.exports = sequelize
