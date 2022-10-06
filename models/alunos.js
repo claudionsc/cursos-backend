@@ -20,4 +20,10 @@ const AlunosModels = sequelize.define('alunos', {
     },
 });
 
+const init = async () => {
+    await AlunosModels.sync();
+};
+
+init()
+
 module.exports = AlunosModels
