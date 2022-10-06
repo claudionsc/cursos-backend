@@ -14,8 +14,7 @@ const user = process.env.DB_USER
 const password = process.env.DB_PASSWORD
 
 
-const database = `postgres://${user}:${password}/${host}:${DBport}/${name}
-`
+const database = `postgres://${user}:${password}@${host}:${DBport}/${name}`
 const port = process.env.PORT || 5000
 
 app.set('json spaces', 2)
