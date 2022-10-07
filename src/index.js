@@ -4,6 +4,9 @@ const Express = require('express')
 const bodyParser = require('body-parser')
 // const database = require('./pg/_database')
 const userRoute = require('./routes/userRoutes')
+var cors = require('cors')
+
+app.use(cors())
 
 const app = Express()
 
@@ -21,6 +24,8 @@ const port = process.env.PORT || 5000
 
 app.set('json spaces', 2)
 app.use(bodyParser.urlencoded({ extended: false }))
+
+
 
 userRoute(app)
 
