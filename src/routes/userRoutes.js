@@ -1,5 +1,7 @@
 const AlunosModels = require('../../models/alunos')
+const cors = require('cors')
 
+app.use(cors())
 
 
 const userRoute = (app) => {
