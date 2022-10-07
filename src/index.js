@@ -4,11 +4,11 @@ const Express = require('express')
 const bodyParser = require('body-parser')
 // const database = require('./pg/_database')
 const userRoute = require('./routes/userRoutes')
-var cors = require('cors')
 
+var cors = require('cors')
+const app = Express()
 app.use(cors())
 
-const app = Express()
 
 const host = process.env.DB_HOST
 const DBport = process.env.DB_PORT 
