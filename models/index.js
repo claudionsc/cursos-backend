@@ -1,7 +1,7 @@
 const sequelize = require('../src/pg/_database')
 
 const models = {
-    alunos: require('./alunos'),
+    cursos: require('./cursos'),
     sequelize: sequelize
 }
 

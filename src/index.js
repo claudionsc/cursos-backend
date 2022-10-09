@@ -30,7 +30,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 userRoute(app)
 
 app.get('/', (req, res) => res.send('Conexão pelo Express bem sucedida' + database))
-// app.get('/alunos', (req, res) => res.send(req.decoded))
 
 
 app.listen(port, () => console.log('------>Api rodando na porta 5000<--------'))

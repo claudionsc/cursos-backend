@@ -1,4 +1,4 @@
-const AlunosModels = require('../../models/alunos')
+const CursosModels = require('../../models/cursos')
 const Express = require('express')
 const cors = require('cors')
 
@@ -10,7 +10,7 @@ app.use(cors())
 
 const userRoute = (app) => {
 
-    app.route('/alunos/:id?')
+    app.route('/cursos/:id?')
         .get(async (req, res) => {
             const { id } = req.params
             const query = {};
@@ -20,16 +20,16 @@ const userRoute = (app) => {
             }
 
             try {
-                const alunos = await AlunosModels.findAll(query)
-                res.send({ alunos })
+                const cursos = await CursosModels.findAll(query)
+                res.send({ cursos })
 
             } catch (error){
-                res.status(400).send({ error: 'Falha ao encontrar aluno' })
+                res.status(400).send({ error: 'Falha ao encontrar curso' })
             }
         })
         .post(async (req, res) => {
             try {
-                const post = new AlunosModels(req.body)
+                const post = new CursosModels(req.body)
                 await post.save()
 
                 res.status(201).send('POST')
@@ -41,10 +41,10 @@ const userRoute = (app) => {
             const { id } = req.params
 
             if(!id) {
-                return res.status(400).send({ error: 'ID do aluno não encontrado'})
+                return res.status(400).send({ error: 'ID do curso não encontrado'})
             }
              try {
-                const updatePost = await AlunosModels.findOneAndUpdate({ _id: id }, req.body, {
+                const updatePost = await CursosModels.findOneAndUpdate({ _id: id }, req.body, {
                     new: true,
                 });
 
@@ -54,7 +54,7 @@ const userRoute = (app) => {
                     return res.status(200).send('OK!')
                 }
 
-                res.status(400).send({ error: 'Não é possível atualizar aluno'})
+                res.status(400).send({ error: 'Não é possível atualizar o curso'})
 
              } catch (error) {
                 res.send(error)
@@ -64,17 +64,17 @@ const userRoute = (app) => {
                const { id } = req.params
 
                if(!id) {
-                    return res.status(400).send({ error: 'ID do aluno não encontrado'})
+                    return res.status(400).send({ error: 'ID do curso não encontrado'})
                }
 
                try {
-                const deletePost = await AlunosModels.deleteOne({ _id: id })
+                const deletePost = await CursosModels.deleteOne({ _id: id })
                 if (deletePost.deletedCount) {
                     return res.send('Deletado')
 
                 }
 
-                res.status(400).send({ error: 'Não foi possível deletar aluno' })
+                res.status(400).send({ error: 'Não foi possível deletar o curso' })
 
                } catch (error) {
                 res.send(error)

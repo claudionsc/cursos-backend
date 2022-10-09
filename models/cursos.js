@@ -1,29 +1,29 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../src/pg/_database')
 
-const AlunosModels = sequelize.define('alunos', {
+const CursosModels = sequelize.define('cursos', {
     nome: {
         type: Sequelize.STRING,
         unique: true
     },
-    email: {
+    linguagem: {
         type: Sequelize.STRING,
         unique: true
     },
-   curso: {
+   free: {
         type: Sequelize.STRING
         
     },
-    nota: {
-        type: Sequelize.DECIMAL,
+    qtdModulos: {
+        type: Sequelize.INTEGER,
         
     },
 });
 
-const init = async () => {
-    await AlunosModels.sync();
-};
+// const init = async () => {
+//     await CursosModels.sync();
+// };
 
-init()
+// init(blur)
 
-module.exports = AlunosModels
+module.exports = CursosModels
