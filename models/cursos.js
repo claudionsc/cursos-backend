@@ -24,6 +24,6 @@ const init = async () => {
     await CursosModels.sync();
 };
 
-init(blur)
+init()
 
 module.exports = CursosModels
