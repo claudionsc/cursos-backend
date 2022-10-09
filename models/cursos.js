@@ -8,10 +8,10 @@ const CursosModels = sequelize.define('cursos', {
     },
     linguagem: {
         type: Sequelize.STRING,
-        unique: true
+      
     },
    free: {
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN
         
     },
     qtdModulos: {
