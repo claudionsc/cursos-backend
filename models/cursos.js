@@ -22,7 +22,22 @@ const CursosModels = sequelize.define('cursos', {
 
 const init = async () => {
     await CursosModels.sync();
+
+    
 };
+
+async function insert(){
+
+    const bruno = await models.cursos.create({
+        nome: 'Api REST em React.js',
+        linguagem: 'React.js',
+        free: true,
+        qtdModulos: 1
+
+    })
+}
+
+insert()
 
 init()
 
