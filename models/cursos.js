@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const sequelize = require('../src/pg/_database')
+const sequelize = require('../src/config/_database')
 
 const CursosModels = sequelize.define('cursos', {
     nome: {

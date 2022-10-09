@@ -1,4 +1,4 @@
-const sequelize = require('../src/pg/_database')
+const sequelize = require('../src/config/_database')
 
 const models = {
     cursos: require('./cursos'),
