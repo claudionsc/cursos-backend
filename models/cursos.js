@@ -20,10 +20,10 @@ const CursosModels = sequelize.define('cursos', {
     },
 });
 
-// const init = async () => {
-//     await CursosModels.sync();
-// };
+const init = async () => {
+    await CursosModels.sync();
+};
 
-// init(blur)
+init(blur)
 
 module.exports = CursosModels
