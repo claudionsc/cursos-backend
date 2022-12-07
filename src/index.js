@@ -25,11 +25,11 @@ const port = process.env.PORT || 5000
 app.set('json spaces', 2)
 app.use(bodyParser.urlencoded({ extended: false }))
 
-
+    
 
 userRoute(app)
 
-app.get('/', (req, res) => res.send('Conexão pelo Express bem sucedida' + database))
+app.get('/', (req, res) => res.send('Conexão pelo Express bem sucedida'))
 
 
 app.listen(port, () => console.log('------>Api rodando na porta 5000<--------'))
