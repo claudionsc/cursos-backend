@@ -2,44 +2,80 @@ const models = require ('../../models')
 
 async function insert(){
 
-    const css = await models.cursos.create({
-        nome: 'CSS Avançado',
-        linguagem: 'CSS',
+    const redux = await models.cursos.create({
+        nome: 'Aprendendo Redux',
+        linguagem: 'ReactJS',
         free: 1,
         qtdModulos: 4,
     });
 
-    const javascript = await models.cursos.create({
-        nome: 'Iniciando com Javascript',
-        linguagem: 'Javascript',
+    const api = await models.cursos.create({
+        nome: 'API Rest',
+        linguagem: 'ReactJS',
         free: 1,
         qtdModulos: 5,
-    });
-
-    const react = await models.cursos.create({
-        nome: 'Iniciando com ReactJs',
-        linguagem: 'ReactJS',
-        free: 0,
-        qtdModulos: 2,
-    });
-
-    const mysql = await models.cursos.create({
-        nome: 'Banco de Dados com MySql',
-        linguagem: 'Banco de Dados',
-        free: 1,
-        qtdModulos: 1,
     });
 
     const node = await models.cursos.create({
-        nome: 'NodeJs',
-        linguagem: 'Javascript',
+        nome: 'Backend com NodeJS',
+        linguagem: 'NodeJS',
         free: 0,
         qtdModulos: 5,
     });
 
+    const express = await models.cursos.create({
+        nome: 'NodeJS com Express',
+        linguagem: 'NodeJS',
+        free: 1,
+        qtdModulos: 3,
+    });
+
     const html = await models.cursos.create({
-        nome: 'HTML Semântico',
+        nome: 'Instrodução a HTML',
         linguagem: 'HTML',
+        free: 0,
+        qtdModulos: 5,
+    });
+
+    const flex = await models.cursos.create({
+        nome: 'CSS Flexbox',
+        linguagem: 'CSS',
+        free: 0,
+        qtdModulos: 3,
+    });
+    const hooks = await models.cursos.create({
+        nome: 'React Hooks',
+        linguagem: 'ReactJS',
+        free: 0,
+        qtdModulos: 1,
+    });
+    const js = await models.cursos.create({
+        nome: 'Práticas avançadas com Javascript',
+        linguagem: 'Javascript',
+        free: 1,
+        qtdModulos: 5,
+    });
+    const sequelize = await models.cursos.create({
+        nome: 'Sequelize e Postgresql',
+        linguagem: 'NodeJS',
+        free: 0,
+        qtdModulos: 3,
+    });
+    const postgres = await models.cursos.create({
+        nome: 'Postgresql',
+        linguagem: 'Banco de Dados Relacionais',
+        free: 1,
+        qtdModulos: 1,
+    });
+    const mysql = await models.cursos.create({
+        nome: 'MySQL',
+        linguagem: 'Banco de Dados Relacionais',
+        free: 0,
+        qtdModulos: 1,
+    });
+    const mongodb = await models.cursos.create({
+        nome: 'MongoDB',
+        linguagem: 'Banco de Dados Não Relacionais',
         free: 0,
         qtdModulos: 3,
     });
