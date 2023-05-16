@@ -18,6 +18,9 @@ const CursosModels = sequelize.define('cursos', {
         type: Sequelize.INTEGER,
         
     },
+    img: {
+        type: Sequelize.STRING
+    }
 });
 
 const init = async () => {
