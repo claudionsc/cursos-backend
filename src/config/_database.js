@@ -16,7 +16,7 @@ const sequelize = new Sequelize(
     }
   })
 
-console.log('Conectado!')
+  console.log('Connected to PlanetScale!');
 
 module.exports = sequelize
 
