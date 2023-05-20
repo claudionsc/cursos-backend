@@ -49,7 +49,7 @@ Caso apresente falha, o erro pode estar na conexão com o banco de dados. Observ
 Com o projeto em funcionamento, você pode simular requisições GET com postman ou até pelo navegador com a rota `http://localhost:5000`. Este caminho exibirá o seguinte:
 `======>Conectado!`
 
-Para exibir o json com as frutas, siga a rota `http://localhost:5000/cursos` e será exibida a lista de frutas criadas com o sequelize.
+Para exibir o json com os cursos, siga a rota `http://localhost:5000/cursos` e será exibida a lista de cursos criada com o sequelize.
 
 ## Neste projeto
 
